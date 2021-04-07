@@ -35,6 +35,7 @@
                    DropDownClosed="ComboBox_DropDownClosed" Canvas.Left="541" Canvas.Top="217" Height="22">
                 <ComboBoxItem Content="0.5" />
                 <ComboBoxItem Content="0.75" />
+               <!-- adir king's great idea-->
                 <ComboBoxItem IsSelected="True" Content="1" />
                 <ComboBoxItem Content="1.5"/>
                 <ComboBoxItem Content="1.75" />

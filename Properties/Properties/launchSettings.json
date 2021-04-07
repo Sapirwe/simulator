@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "simulator": {
+      "commandName": "Project",
+      "sqlDebugging": false,
+      "nativeDebugging": false
+    }
+  }
+}

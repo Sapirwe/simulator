@@ -104,21 +104,7 @@ namespace simulator
             model.setspeed2();
         }
 
-        public void open_csv_file()
-        {
-            model.open_csv();
-        }
-
-        public void open_xml_file()
-        {
-            model.open_xml();
-        }
-
-        public void start_running()
-        {
-            model.connect();
-            model.start();
-        }
+        
 
     }
 }

@@ -5,12 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:simulator"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-
-
+             d:DesignHeight="70" d:DesignWidth="600" Background="LightSkyBlue">
+    <!--<Grid>
         <Canvas HorizontalAlignment="Left" Width="715">
-
             <Button x:Name="play" Content="play" Grid.Column="1" HorizontalAlignment="Left" Margin="9.333,217,0,0" VerticalAlignment="Top" Width="73" Click="play_Click_1" Height="55"/>
             <Button x:Name="stop" Content="stop" Grid.Column="1" HorizontalAlignment="Left" Margin="92.333,217,0,0" VerticalAlignment="Top" Width="71" Height="55" Click="stop_Click_1"/>
             <Button x:Name="pause" Content="pause" Grid.Column="1" HorizontalAlignment="Left" Margin="172.333,217,0,0" VerticalAlignment="Top" Width="63" Height="55" Click="pause_Click_1"/>
@@ -35,7 +32,9 @@
                    DropDownClosed="ComboBox_DropDownClosed" Canvas.Left="541" Canvas.Top="217" Height="22">
                 <ComboBoxItem Content="0.5" />
                 <ComboBoxItem Content="0.75" />
-               <!-- adir king's great idea-->
+                -->
+    <!-- adir king's great idea-->
+    <!--
                 <ComboBoxItem IsSelected="True" Content="1" />
                 <ComboBoxItem Content="1.5"/>
                 <ComboBoxItem Content="1.75" />
@@ -47,6 +46,43 @@
                     Minimum="0" TickPlacement="BottomRight" TickFrequency="10" Width="243" Background="BlueViolet" ValueChanged="slider_ValueChanged" Height="30"/>
             </DockPanel>
         </Canvas>
+    </Grid>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <!--<RowDefinition Height="auto"/>-->
+        </Grid.RowDefinitions>
+        <!--<Canvas HorizontalAlignment="Left" Width="715">-->
+        <Button x:Name="back" Content="⏮️" Grid.Row="1" Grid.Column="0" Width="auto" Height="30" FontSize="20" Click="back_Click_1" Cursor="Hand" Margin="0,0,0,0" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button x:Name="play" Content="▶️" Grid.Row="1" Grid.Column="1" Width="auto"  Height="30" FontSize="20" Click="play_Click_1" Cursor="Hand"  Margin="0,0,0,0" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button x:Name="stop" Content="⏹️" Grid.Row="1" Grid.Column="3"  Width="auto" Height="30" FontSize="20" Click="stop_Click_1" Cursor="Hand"  Margin="0,0,0,0" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button x:Name="pause" Content="⏸️" Grid.Row="1" Grid.Column="2" Width="auto" Height="30" FontSize="20" Click="pause_Click_1" Cursor="Hand" Margin="0,0,0,0" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button x:Name="forward" Content="⏭️" Grid.Row="1" Grid.Column="4" Width="auto" FontSize="20" Click="forward_Click_1" Cursor="Hand" Margin="0,0,0,0" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Top" />
 
+        <ComboBox   HorizontalAlignment="Center" VerticalAlignment="Top" Width="60" FontSize="14" Name="cmbSelect" SelectionChanged="ComboBox_SelectionChanged" 
+                   DropDownClosed="ComboBox_DropDownClosed" Height="auto" Grid.Row="1" Grid.Column="5" Cursor="Hand" Margin="0,0,0,0" Background="Transparent" >
+            <ComboBoxItem Content="0.5"  />
+            <ComboBoxItem Content="0.75" />
+            <ComboBoxItem IsSelected="True" Content="1" />
+            <ComboBoxItem Content="1.5"/>
+            <ComboBoxItem Content="1.75" />
+            <ComboBoxItem Content="2" />
+        </ComboBox>
+
+        <!--<DockPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">-->
+        <Slider x:Name="slider" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Value="{Binding VM_Index_line}" Maximum="{Binding VM_Max_line}" 
+                    Minimum="0" TickPlacement="BottomRight" TickFrequency="10"  ValueChanged="slider_ValueChanged"  Height="auto" Cursor="Hand" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+        <!--</DockPanel>-->
+        <!--</Canvas>-->
     </Grid>
 </UserControl>

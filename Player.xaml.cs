@@ -43,23 +43,6 @@ namespace simulator
         {
 
         }
-
-
-        // open file browser
-        private void Open_csv_Click(object sender, RoutedEventArgs e)
-        {
-            player_vm.open_csv_file();
-        }
-
-        private void Open_xml_Click(object sender, RoutedEventArgs e)
-        {
-            player_vm.open_xml_file();
-        }
-
-        private void Start_Click(object sender, RoutedEventArgs e)
-        {
-            player_vm.start_running();
-        }
         private void play_Click_1(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("play click!!");
